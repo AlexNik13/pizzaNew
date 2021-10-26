@@ -5,10 +5,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Price {
-    private static final Map<String, Double> priceDrinkTea = new HashMap<>();
-    private static final Map<String, Double> priceDrinkNoAlcohol = new HashMap<>();
-    private static final Map<String, Double> priceDrinkAlcohol = new HashMap<>();
-    public static final Map<String, Double> priceDrink = new LinkedHashMap<>();
+    private static Map<String, Double> priceDrinkTea = new HashMap<>();
+    private static Map<String, Double> priceDrinkNoAlcohol = new HashMap<>();
+    private static Map<String, Double> priceDrinkAlcohol = new HashMap<>();
+    public static Map<String, Double> priceDrink = new LinkedHashMap<>();
 
 
     static {

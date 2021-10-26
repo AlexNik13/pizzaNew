@@ -28,12 +28,4 @@ public class Drink {
     public void setCost(double cost) {
         this.cost = cost;
     }
-
-    public int getPortion() {
-        return portion;
-    }
-
-    public void setPortion(int portion) {
-        this.portion = portion;
-    }
 }
