@@ -1,9 +1,9 @@
-import menu.MenuPizza;
+import menu.MainMenu;
 
 public class Programm {
 
     public static void main(String[] args) {
-        MenuPizza menuPizza = new MenuPizza();
-        menuPizza.start();
+        MainMenu mainMenu = new MainMenu();
+        mainMenu.start();
     }
 }
