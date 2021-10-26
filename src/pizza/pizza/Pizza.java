@@ -2,11 +2,13 @@ package pizza.pizza;
 
 import pizza.ingredients.Ingredient;
 
+import java.util.ArrayList;
+
 public abstract class Pizza {
     private PizzaType type;
     private String name;
     private double costPizza;
-    private Ingredient[] ingredients = new Ingredient[3];
+    private ArrayList<Ingredient> ingredients = new ArrayList<>();
 
     Pizza(String name) {
         this.name = name;
@@ -25,28 +27,29 @@ public abstract class Pizza {
         return costPizza;
     }
 
-    public Ingredient[] getIngredients() {
+    public ArrayList<Ingredient> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(Ingredient[] ingredients) {
+    public void setIngredients(ArrayList<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
 
 
     public double costPizza() {
         costPizza = 0;
-        for (int i = 0; i < ingredients.length; i++) {
-            costPizza += (ingredients[i].getCost() / 1000) * ingredients[i].getQuantity();
+        for (Ingredient ingredient :ingredients ){
+            costPizza += ingredient.getCost() / 1000 * ingredient.getQuantity();
         }
+
         return costPizza;
     }
 
-    public Ingredient[] getBaseIngredients() {
-        Ingredient[] ingredients = new Ingredient[3];
-        ingredients[0] = new Ingredient("Тесто", 50, 100);
-        ingredients[1] = new Ingredient("Сыр", 50, 100);
-        ingredients[2] = new Ingredient("Соус", 50, 50);
+    public ArrayList<Ingredient> getBaseIngredients() {
+        ArrayList<Ingredient> ingredients = new ArrayList<>();
+        ingredients.add(new Ingredient("Тесто", 50, 100)) ;
+        ingredients.add(new Ingredient("Сыр", 50, 100)) ;
+        ingredients.add(new Ingredient("Соус", 50, 50)) ;
         return ingredients;
     }
 

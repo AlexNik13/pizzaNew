@@ -3,6 +3,8 @@ package pizza;
 import pizza.ingredients.Ingredient;
 import pizza.pizza.*;
 
+import java.util.ArrayList;
+
 public class MyPizzaria implements Pizzaria {
 
     @Override
@@ -36,19 +38,9 @@ public class MyPizzaria implements Pizzaria {
     }
 
     @Override
-    public Pizza addIngredients(Pizza pizza, Ingredient[] additionalIngredients) {
-        Ingredient[] baseIngredient = pizza.getIngredients();
-        int size = baseIngredient.length + additionalIngredients.length;
-        Ingredient[] newIngredient = new Ingredient[size];
-        int i = 0;
-        for(int j = 0; j < additionalIngredients.length; j++){
-            newIngredient[i] = additionalIngredients[j];
-            i++;
-        }
-        for(int j = 0; j < baseIngredient.length; j++){
-            newIngredient[i] = baseIngredient[j];
-            i++;
-        }
+    public Pizza addIngredients(Pizza pizza, ArrayList<Ingredient> additionalIngredients) {
+        ArrayList<Ingredient> newIngredient = pizza.getIngredients();
+        newIngredient.addAll(additionalIngredients);
         pizza.setIngredients(newIngredient);
         pizza.setName(pizza.getName() + "*");
         pizza.costPizza();

@@ -69,8 +69,8 @@ public class MenuPizza {
         return pizza;
     }
 
-    private Ingredient[] addIngredient() {
-        Ingredient[] addIngredient = new Ingredient[0];
+    private ArrayList<Ingredient> addIngredient() {
+        ArrayList<Ingredient> ingredients = new ArrayList<>();
         boolean menu = true;
 
         while (menu) {
@@ -93,44 +93,35 @@ public class MenuPizza {
                     menu = false;
                     break;
                 case 1:
-                    addIngredient = addIngredient(addIngredient, NameIngredient.MEAT);
+                    ingredients.add(new Ingredient(NameIngredient.MEAT, 100));
                     break;
                 case 2:
-                    addIngredient = addIngredient(addIngredient, NameIngredient.BACON);
+                    ingredients.add(new Ingredient(NameIngredient.BACON, 100));
                     break;
                 case 3:
-                    addIngredient = addIngredient(addIngredient, NameIngredient.HAM);
+                    ingredients.add(new Ingredient(NameIngredient.HAM, 100));
                     break;
                 case 4:
-                    addIngredient = addIngredient(addIngredient, NameIngredient.BELLPEPPER);
+                    ingredients.add(new Ingredient(NameIngredient.BELLPEPPER, 100));
                     break;
                 case 5:
-                    addIngredient = addIngredient(addIngredient, NameIngredient.ONION);
+                    ingredients.add(new Ingredient(NameIngredient.ONION, 100));
                     break;
                 case 6:
-                    addIngredient = addIngredient(addIngredient, NameIngredient.OLIVES);
+                    ingredients.add(new Ingredient(NameIngredient.OLIVES, 100));
                     break;
                 case 7:
-                    addIngredient = addIngredient(addIngredient, NameIngredient.BROCCOLI);
+                    ingredients.add(new Ingredient(NameIngredient.BROCCOLI, 100));
                     break;
                 case 8:
-                    addIngredient = addIngredient(addIngredient, NameIngredient.MUSHROOMS);
+                    ingredients.add(new Ingredient(NameIngredient.MUSHROOMS, 100));
                     break;
                 case 9:
-                    addIngredient = addIngredient(addIngredient, NameIngredient.SAUSAGE);
+                    ingredients.add(new Ingredient(NameIngredient.SAUSAGE, 100));
                     break;
             }
         }
-        return addIngredient;
+        return ingredients;
     }
 
-    private Ingredient[] addIngredient(Ingredient[] ingredient, NameIngredient type) {
-        Ingredient[] addIngredient = new Ingredient[ingredient.length + 1];
-
-        for (int i = 0; i < ingredient.length; i++) {
-            addIngredient[i] = ingredient[i];
-        }
-        addIngredient[ingredient.length] = new Ingredient(type, 50);
-        return addIngredient;
-    }
 }
