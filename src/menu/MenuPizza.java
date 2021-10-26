@@ -1,7 +1,6 @@
 package menu;
 
 import pizza.MyPizzaria;
-import pizza.OrderPizza;
 import pizza.ingredients.Ingredient;
 import pizza.ingredients.NameIngredient;
 import pizza.pizza.Pizza;
@@ -34,8 +33,6 @@ public class MenuPizza {
             switch (choice) {
                 case 0:
                     menu = false;
-                    OrderPizza orderPizza = new OrderPizza(pizza);
-                    orderPizza.printCheck();
                     break;
                 case 1:
                     pizza.add(addPizza(PizzaType.MEAT));
