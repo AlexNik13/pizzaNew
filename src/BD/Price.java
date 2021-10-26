@@ -9,6 +9,7 @@ public class Price {
     private static final Map<String, Double> priceDrinkNoAlcohol = new HashMap<>();
     private static final Map<String, Double> priceDrinkAlcohol = new HashMap<>();
     public static final Map<String, Double> priceDrink = new LinkedHashMap<>();
+    public static final Map<String, Double> salad = new LinkedHashMap<>();
 
 
     static {
@@ -30,5 +31,13 @@ public class Price {
         priceDrink.putAll(priceDrinkTea);
         priceDrink.putAll(priceDrinkNoAlcohol);
         priceDrink.putAll(priceDrinkAlcohol);
+
+        salad.put("Королевский", 85.);
+        salad.put("Ёжик", 45.);
+        salad.put("Мужские слезы", 89.);
+        salad.put("Красное море", 76.);
+        salad.put("Салат из грибов и курицы", 60.);
+        salad.put("«Обжорка» с курицей", 99.);
+
     }
 }

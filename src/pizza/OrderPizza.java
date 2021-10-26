@@ -7,7 +7,6 @@ import java.util.ArrayList;
 
 public class OrderPizza implements Order {
     ArrayList<Pizza> pizza;
-    private double costPizza;
     private double cost;
 
     public OrderPizza(ArrayList<Pizza> pizza) {

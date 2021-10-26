@@ -1,6 +1,8 @@
 package menu;
 
 import drink.MenuDrink;
+import pizza.MenuPizza;
+import salad.MenuSalad;
 
 import java.util.Scanner;
 
@@ -17,6 +19,7 @@ public class MainMenu {
         while (menu){
             System.out.println("1. Заказать пиццу.");
             System.out.println("2. Заказать напиток.");
+            System.out.println("3. Заказать напиток.");
             System.out.println("0. Посчитать.");
 
             int choice = in.nextInt();
@@ -29,7 +32,10 @@ public class MainMenu {
                     check.addOrderPizza(new MenuPizza().menuPizza());
                     break;
 
-                case 2:
+                /*case 2:
+                    check.addOrderDrink(new MenuSalad().menuSalad());
+                    break;*/
+                case 3:
                     check.addOrderDrink(new MenuDrink().menuDrink());
                     break;
             }

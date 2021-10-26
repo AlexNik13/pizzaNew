@@ -1,4 +1,4 @@
-package menu;
+package pizza;
 
 import pizza.MyPizzaria;
 import pizza.ingredients.Ingredient;
