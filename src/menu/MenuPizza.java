@@ -17,7 +17,7 @@ public class MenuPizza {
     public MenuPizza() {
     }
 
-    public ArrayList<Pizza> start() {
+    public ArrayList<Pizza> menuPizza() {
         ArrayList<Pizza> pizza = new ArrayList<>();
         boolean menu = true;
 
@@ -31,9 +31,7 @@ public class MenuPizza {
 
             int choice = in.nextInt();
             switch (choice) {
-                case 0:
-                    menu = false;
-                    break;
+
                 case 1:
                     pizza.add(addPizza(PizzaType.MEAT));
                     break;
@@ -45,6 +43,9 @@ public class MenuPizza {
                     break;
                 case 4:
                     pizza.add(addPizza(PizzaType.AUTHOR));
+                    break;
+                case 0:
+                    menu = false;
                     break;
             }
         }

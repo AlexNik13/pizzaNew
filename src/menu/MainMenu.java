@@ -1,35 +1,41 @@
 package menu;
 
 import drink.MenuDrink;
-import drink.OrderDrink;
-import pizza.OrderPizza;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainMenu {
-    private ArrayList<Order> orders = new ArrayList<>();
+    private Check check = new Check();
     private Scanner in = new Scanner(System.in);
 
     public MainMenu() {
     }
 
     public void start() {
-        System.out.println("1. Заказать пиццу.");
-        System.out.println("2. Заказать напиток.");
-        System.out.println("0. Посчитать.");
 
-        int choice = in.nextInt();
+        boolean menu = true;
+        while (menu){
+            System.out.println("1. Заказать пиццу.");
+            System.out.println("2. Заказать напиток.");
+            System.out.println("0. Посчитать.");
 
-        switch (choice) {
-            case 1:
-                orders.add(new OrderPizza(new MenuPizza().start()));
-                break;
+            int choice = in.nextInt();
+            switch (choice) {
+                case 0:
+                    menu = false;
+                    break;
 
-            case 2:
-                orders.add(new OrderDrink(new MenuDrink().menuDrink()));
-                break;
+                case 1:
+                    check.addOrderPizza(new MenuPizza().menuPizza());
+                    break;
+
+                case 2:
+                    check.addOrderDrink(new MenuDrink().menuDrink());
+                    break;
+            }
         }
+
+        check.printCheck();
 
 
     }

@@ -23,4 +23,9 @@ public class OrderPizza implements Order {
         }
         System.out.printf("    за пиццу %.2f\n", cost);
     }
+
+    @Override
+    public double getCost() {
+        return cost;
+    }
 }

@@ -35,11 +35,11 @@ public class MenuDrink {
         return drinks;
     }
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         System.out.println("Напитки");
         MenuDrink menuDrink = new MenuDrink();
         OrderDrink orderDrink = new OrderDrink (menuDrink.menuDrink());
 
         orderDrink.printCheck();
-    }
+    }*/
 }

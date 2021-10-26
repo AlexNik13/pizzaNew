@@ -13,13 +13,20 @@ public class OrderDrink implements Order {
         this.drinks = drinks;
     }
 
+
+
     @Override
     public void printCheck() {
         System.out.println("Напитки: ");
         for (Drink drink : drinks){
             System.out.printf("%s (%s) - %.2f\n", drink.getName(), drink.getPortion() ,drink.getCost());
-            cost += drink.getCost();
+            cost += drink.getCost() * drink.getPortion();
         }
         System.out.printf("    за напитки %.2f\n", cost);
+    }
+
+    @Override
+    public double getCost() {
+        return cost;
     }
 }
