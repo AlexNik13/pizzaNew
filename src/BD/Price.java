@@ -5,18 +5,13 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Price {
-<<<<<<< HEAD
-    private static Map<String, Double> priceDrinkTea = new HashMap<>();
-    private static Map<String, Double> priceDrinkNoAlcohol = new HashMap<>();
-    private static Map<String, Double> priceDrinkAlcohol = new HashMap<>();
-    public static Map<String, Double> priceDrink = new LinkedHashMap<>();
-=======
+
     private static final Map<String, Double> priceDrinkTea = new HashMap<>();
     private static final Map<String, Double> priceDrinkNoAlcohol = new HashMap<>();
     private static final Map<String, Double> priceDrinkAlcohol = new HashMap<>();
     public static final Map<String, Double> priceDrink = new LinkedHashMap<>();
-    public static final Map<String, Double> salad = new LinkedHashMap<>();
->>>>>>> bccd5b2
+    public static final Map<String, Double> priceSalad = new LinkedHashMap<>();
+
 
 
     static {
@@ -39,12 +34,12 @@ public class Price {
         priceDrink.putAll(priceDrinkNoAlcohol);
         priceDrink.putAll(priceDrinkAlcohol);
 
-        salad.put("Королевский", 85.);
-        salad.put("Ёжик", 45.);
-        salad.put("Мужские слезы", 89.);
-        salad.put("Красное море", 76.);
-        salad.put("Салат из грибов и курицы", 60.);
-        salad.put("«Обжорка» с курицей", 99.);
+        priceSalad.put("Королевский", 85.);
+        priceSalad.put("Ёжик", 45.);
+        priceSalad.put("Мужские слезы", 89.);
+        priceSalad.put("Красное море", 76.);
+        priceSalad.put("Салат из грибов и курицы", 60.);
+        priceSalad.put("«Обжорка» с курицей", 99.);
 
     }
 }

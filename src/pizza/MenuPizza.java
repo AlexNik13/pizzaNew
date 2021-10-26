@@ -27,7 +27,7 @@ public class MenuPizza {
             System.out.println("2. Вегатареанская пицца");
             System.out.println("3. Маргарита пицца");
             System.out.println("4. Своя пицца");
-            System.out.println("0. Посчитать");
+            System.out.println("0. Вернуться назад.");
 
             int choice = in.nextInt();
             switch (choice) {

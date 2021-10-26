@@ -15,6 +15,10 @@ public class Salad {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public double getCost() {
         return cost;
     }

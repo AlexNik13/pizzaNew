@@ -18,7 +18,7 @@ public class MainMenu {
         boolean menu = true;
         while (menu){
             System.out.println("1. Заказать пиццу.");
-            System.out.println("2. Заказать напиток.");
+            System.out.println("2. Заказать салат.");
             System.out.println("3. Заказать напиток.");
             System.out.println("0. Посчитать.");
 
@@ -32,9 +32,9 @@ public class MainMenu {
                     check.addOrderPizza(new MenuPizza().menuPizza());
                     break;
 
-                /*case 2:
-                    check.addOrderDrink(new MenuSalad().menuSalad());
-                    break;*/
+                case 2:
+                    check.addOrderSalad(new MenuSalad().menuSalad());
+                    break;
                 case 3:
                     check.addOrderDrink(new MenuDrink().menuDrink());
                     break;

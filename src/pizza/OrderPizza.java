@@ -7,12 +7,9 @@ import java.util.ArrayList;
 
 public class OrderPizza implements Order {
     ArrayList<Pizza> pizza;
-<<<<<<< HEAD
-    private double costPizza;
-    double cost;
-=======
+
     private double cost;
->>>>>>> bccd5b2
+
 
     public OrderPizza(ArrayList<Pizza> pizza) {
         this.pizza = pizza;
