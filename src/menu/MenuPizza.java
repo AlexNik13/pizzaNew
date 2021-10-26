@@ -1,22 +1,25 @@
-package pizza;
+package menu;
 
+import pizza.MyPizzaria;
+import pizza.OrderPizza;
 import pizza.ingredients.Ingredient;
 import pizza.ingredients.NameIngredient;
 import pizza.pizza.Pizza;
 import pizza.pizza.PizzaType;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Menu {
+public class MenuPizza {
 
-    static Scanner in = new Scanner(System.in);
-    private  MyPizzaria pizzaria = new MyPizzaria();
+    private Scanner in = new Scanner(System.in);
+    private MyPizzaria pizzaria = new MyPizzaria();
 
-    public Menu() {
+    public MenuPizza() {
     }
 
-    public Pizza[] start() {
-        Pizza[] pizza = new Pizza[0];
+    public ArrayList<Pizza> start() {
+        ArrayList<Pizza> pizza = new ArrayList<>();
         boolean menu = true;
 
         while (menu) {
@@ -31,20 +34,20 @@ public class Menu {
             switch (choice) {
                 case 0:
                     menu = false;
-                    Order order = new Order(pizza);
-                    order.printCheck();
+                    OrderPizza orderPizza = new OrderPizza(pizza);
+                    orderPizza.printCheck();
                     break;
                 case 1:
-                    pizza = addPizza(pizza, PizzaType.MEAT);
+                    pizza.add(addPizza(PizzaType.MEAT));
                     break;
                 case 2:
-                    pizza = addPizza(pizza, PizzaType.VEGETAN);
+                    pizza.add(addPizza(PizzaType.VEGETAN));
                     break;
                 case 3:
-                    pizza = addPizza(pizza, PizzaType.MARGARITA);
+                    pizza.add(addPizza(PizzaType.MARGARITA));
                     break;
                 case 4:
-                    pizza = addPizza(pizza, PizzaType.AUTHOR);
+                    pizza.add(addPizza(PizzaType.AUTHOR));
                     break;
             }
         }
@@ -60,14 +63,10 @@ public class Menu {
         return pizza;
     }
 
-    private Pizza[] addPizza(Pizza[] pizza, PizzaType type) {
-        Pizza[] addPizza = new Pizza[pizza.length + 1];
-        for (int i = 0; i < pizza.length; i++) {
-            addPizza[i] = pizza[i];
-        }
-        addPizza[pizza.length] = pizzaria.createPizza(type);
-        addPizza[pizza.length] = makeAddIngredient(addPizza[pizza.length]);
-        return addPizza;
+    private Pizza addPizza(PizzaType type) {
+        Pizza pizza = pizzaria.createPizza(type);
+        pizza = makeAddIngredient(pizza);
+        return pizza;
     }
 
     private Ingredient[] addIngredient() {
