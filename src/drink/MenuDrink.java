@@ -11,22 +11,34 @@ public class MenuDrink {
     private ArrayList<String> nameDrink = new ArrayList<>(Price.priceDrink.keySet());
 
 
-    public MenuDrink() {
+    public ArrayList<Drink> menuDrink() {
+
+        while (true){
+            int i = 1;
+            for (String nameDrink : nameDrink){
+                System.out.println(i++ + ". " + nameDrink);
+            }
+            System.out.println("0. Вернуться назад.");
+            System.out.println("Выберете напиток: ");
+            int choice = in.nextInt();
+            if (choice == 0){
+                break;
+            }
+
+            System.out.print("Введите количество порций: ");
+            int portion = in.nextInt();
+            String name = nameDrink.get(choice - 1);
+            double cost = Price.priceDrink.get(name);
+            drinks.add(new Drink(name, cost, portion));
+        }
+        return drinks;
     }
 
-<<<<<<< HEAD
-
-
-    public static void main(String[] args) {
-=======
    /* public static void main(String[] args) {
->>>>>>> bccd5b2
         System.out.println("Напитки");
+        MenuDrink menuDrink = new MenuDrink();
+        OrderDrink orderDrink = new OrderDrink (menuDrink.menuDrink());
 
-<<<<<<< HEAD
-    }
-=======
         orderDrink.printCheck();
     }*/
->>>>>>> bccd5b2
 }
