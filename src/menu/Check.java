@@ -14,7 +14,7 @@ import java.util.List;
 
 public class Check {
     private ArrayList<Order> orders;
-
+    private double cost;
     public Check() {
         orders = new ArrayList<>();
     }
@@ -32,7 +32,7 @@ public class Check {
     }
 
     public void printCheck(){
-        double cost = 0;
+        cost = 0;
         System.out.println("Чек\n_____________");
         for (Order order : orders ){
             order.printCheck();
@@ -40,5 +40,9 @@ public class Check {
         }
         System.out.println("_____________");
         System.out.printf("\n   Итого %.2f\n", cost);
+    }
+
+    public double getCost() {
+        return cost;
     }
 }

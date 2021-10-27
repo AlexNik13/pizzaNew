@@ -4,6 +4,6 @@ public class Programm {
 
     public static void main(String[] args) {
         MainMenu mainMenu = new MainMenu();
-        mainMenu.start();
+        while (mainMenu.newCustomer());
     }
 }
