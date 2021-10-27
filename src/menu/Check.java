@@ -2,15 +2,12 @@ package menu;
 
 import drink.Drink;
 import drink.OrderDrink;
-import menu.Order;
 import pizza.OrderPizza;
 import pizza.pizza.Pizza;
 import salad.OrderSalad;
 import salad.Salad;
 
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 public class Check {
     private ArrayList<Order> orders;

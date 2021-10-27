@@ -10,9 +10,7 @@ public class MenuDrink {
     private ArrayList<Drink> drinks = new ArrayList<>();
     private ArrayList<String> nameDrink = new ArrayList<>(Price.priceDrink.keySet());
 
-
     public ArrayList<Drink> menuDrink() {
-
         while (true){
             int i = 1;
             for (String nameDrink : nameDrink){
@@ -34,16 +32,7 @@ public class MenuDrink {
             }catch (IndexOutOfBoundsException e){
                 System.out.println("----------------\nневерный выбор\n----------------");
             }
-
         }
         return drinks;
     }
-
-   /* public static void main(String[] args) {
-        System.out.println("Напитки");
-        MenuDrink menuDrink = new MenuDrink();
-        OrderDrink orderDrink = new OrderDrink (menuDrink.menuDrink());
-
-        orderDrink.printCheck();
-    }*/
 }

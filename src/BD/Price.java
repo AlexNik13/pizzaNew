@@ -12,8 +12,6 @@ public class Price {
     public static final Map<String, Double> priceDrink = new LinkedHashMap<>();
     public static final Map<String, Double> priceSalad = new LinkedHashMap<>();
 
-
-
     static {
         priceDrinkTea.put("Чай черный", 15.);
         priceDrinkTea.put("Чай зеленый", 15.);
@@ -39,6 +37,5 @@ public class Price {
         priceSalad.put("Мужские слезы", 89.);
         priceSalad.put("Красное море", 76.);
         priceSalad.put("«Обжорка» с курицей", 99.);
-
     }
 }

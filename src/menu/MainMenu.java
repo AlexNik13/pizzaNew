@@ -11,7 +11,6 @@ public class MainMenu {
     private Scanner in = new Scanner(System.in);
     private ArrayList<Check> checks = new ArrayList<>();
 
-
     public MainMenu() {
     }
 

@@ -1,6 +1,5 @@
 package salad;
 
-import BD.Price;
 import BD.PriceIngredient;
 import BD.Recipe;
 
@@ -19,21 +18,26 @@ public class Salad {
         this.cost = countCost();
     }
 
-    private double countCost(){
+    private double countCost() {
         double cost = 0;
-        for (Map.Entry<String, Integer> ingredient : recipe.entrySet()){
-            cost += ingredient.getValue() * ( PriceIngredient.price.get(ingredient.getKey()) /1000);
+        for (Map.Entry<String, Integer> ingredient : recipe.entrySet()) {
+            cost += ingredient.getValue() * (PriceIngredient.price.get(ingredient.getKey()) / 1000);
         }
         return cost;
     }
 
-    private Map<String, Integer> recipe(String name){
-        switch (name){
-            case "Королевский":  return Recipe.saladRoyal();
-            case "Ёжик":  return new Recipe().saladHedgehog();
-            case "Мужские слезы":  return new Recipe().saladMenTear();
-            case "Красное море":  return new Recipe().saladRedSea();
-            case "«Обжорка» с курицей":  return new Recipe().saladGluttony();
+    private Map<String, Integer> recipe(String name) {
+        switch (name) {
+            case "Королевский":
+                return Recipe.saladRoyal();
+            case "Ёжик":
+                return new Recipe().saladHedgehog();
+            case "Мужские слезы":
+                return new Recipe().saladMenTear();
+            case "Красное море":
+                return new Recipe().saladRedSea();
+            case "«Обжорка» с курицей":
+                return new Recipe().saladGluttony();
         }
         return null;
     }

@@ -38,7 +38,5 @@ public class PriceIngredient {
         price.put("Филе куриное", 99.);
         price.put("Чеснок", 250.);
         price.put("Яйца", 93.);
-
     }
-
 }

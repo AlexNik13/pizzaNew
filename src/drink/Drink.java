@@ -1,7 +1,5 @@
 package drink;
 
-import java.util.Scanner;
-
 public class Drink {
     private String name;
     private double cost;
