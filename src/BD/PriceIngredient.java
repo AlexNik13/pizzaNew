@@ -8,7 +8,7 @@ public class PriceIngredient {
 
     static {
         price.put("Ананасы консервированные", 250.);
-        price.put("Ветчина", 320.);
+        price.put("Ветчина", 220.);
         price.put("Горошек", 150.);
         price.put("Горчица", 100.);
         price.put("Капуста пекинская", 25.);
@@ -16,13 +16,13 @@ public class PriceIngredient {
         price.put("Колбаса вареная", 125.);
         price.put("Колбаса копченая", 189.);
         price.put("Колбаса сырокопченая", 260.);
-        price.put("Крабовые палочки", 349.);
+        price.put("Крабовые палочки", 149.);
         price.put("Кукуруза консервированная", 256.);
         price.put("Куриная грудка отварная", 99.);
         price.put("Лимон (сок)", 100.);
         price.put("Листья салата", 150.);
         price.put("Лук", 23.);
-        price.put("Майонез", 127.);
+        price.put("Майонез", 88.);
         price.put("Масло оливковое ", 167.);
         price.put("Морковь", 45.);
         price.put("Огурец свежий", 56.);
@@ -36,7 +36,7 @@ public class PriceIngredient {
         price.put("Сыр плавленый", 200.);
         price.put("Сыр твердый", 165.);
         price.put("Филе куриное", 99.);
-        price.put("Чеснок", 450.);
+        price.put("Чеснок", 250.);
         price.put("Яйца", 93.);
 
     }
