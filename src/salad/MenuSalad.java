@@ -27,9 +27,14 @@ public class MenuSalad {
 
             System.out.print("Введите количество порций: ");
             int portion = in.nextInt();
-            String name = nameSalad.get(choice - 1);
-            double cost = Price.priceSalad.get(name);
-            salads.add(new Salad(name, portion));
+            try {
+                String name = nameSalad.get(choice - 1);
+                double cost = Price.priceSalad.get(name);
+                salads.add(new Salad(name, portion));
+            }catch (IndexOutOfBoundsException e){
+                System.out.println("----------------\nневерный выбор\n----------------");
+            }
+
         }
         return salads;
     }

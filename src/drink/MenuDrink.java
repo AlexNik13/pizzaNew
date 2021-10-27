@@ -27,9 +27,14 @@ public class MenuDrink {
 
             System.out.print("Введите количество порций: ");
             int portion = in.nextInt();
-            String name = nameDrink.get(choice - 1);
-            double cost = Price.priceDrink.get(name);
-            drinks.add(new Drink(name, cost, portion));
+            try {
+                String name = nameDrink.get(choice - 1);
+                double cost = Price.priceDrink.get(name);
+                drinks.add(new Drink(name, cost, portion));
+            }catch (IndexOutOfBoundsException e){
+                System.out.println("----------------\nневерный выбор\n----------------");
+            }
+
         }
         return drinks;
     }
