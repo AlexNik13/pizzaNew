@@ -17,12 +17,12 @@ public class OrderPizza implements Order {
 
     @Override
     public void printCheck() {
-        System.out.println("Чек");
+        System.out.println("\nПицца: ");
         for (int i = 0; i < pizza.size(); i++) {
             System.out.printf("%s - %.2f\n", pizza.get(i).getName() ,pizza.get(i).getCost());
             cost += pizza.get(i).getCost();
         }
-        System.out.printf("Итого %.2f\n", cost);
+       // System.out.printf("Итого %.2f\n", cost);
 
     }
 

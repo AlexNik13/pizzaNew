@@ -38,6 +38,7 @@ public class Check {
             order.printCheck();
             cost += order.getCost();
         }
-        System.out.printf("Итого %.2f\n", cost);
+        System.out.println("_____________");
+        System.out.printf("\n   Итого %.2f\n", cost);
     }
 }

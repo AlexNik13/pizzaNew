@@ -1,7 +1,6 @@
 package salad;
 
 import BD.Price;
-import drink.Drink;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -30,7 +29,7 @@ public class MenuSalad {
             int portion = in.nextInt();
             String name = nameSalad.get(choice - 1);
             double cost = Price.priceSalad.get(name);
-            salads.add(new Salad(name, cost, portion));
+            salads.add(new Salad(name, portion));
         }
         return salads;
     }

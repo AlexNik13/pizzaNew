@@ -16,12 +16,12 @@ public class OrderSalad implements Order {
 
     @Override
     public void printCheck() {
-        System.out.println("Салаты: ");
+        System.out.println("\nСалаты: ");
         for (Salad salad : salads){
             System.out.printf("%s (%s * %.2f) = %.2f \n", salad.getName(), salad.getPortion() ,salad.getCost(), (salad.getCost() * salad.getPortion()));
             cost += salad.getCost() * salad.getPortion();
         }
-        System.out.printf("    за напитки %.2f\n", cost);
+       // System.out.printf("    за напитки %.2f\n", cost);
     }
 
     @Override

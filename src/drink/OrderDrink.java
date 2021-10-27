@@ -19,12 +19,12 @@ public class OrderDrink implements Order {
     @Override
     public void printCheck() {
 
-        System.out.println("Напитки: ");
+        System.out.println("\nНапитки: ");
         for (Drink drink : drinks){
             System.out.printf("%s (%s * %.2f) = %.2f \n", drink.getName(), drink.getPortion() ,drink.getCost(),(drink.getCost() * drink.getPortion()) );
             cost += drink.getCost() * drink.getPortion();
         }
-        System.out.printf("    за напитки %.2f\n", cost);
+       // System.out.printf("    за напитки %.2f\n", cost);
 
     }
 

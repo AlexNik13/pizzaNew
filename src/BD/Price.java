@@ -38,7 +38,6 @@ public class Price {
         priceSalad.put("Ёжик", 45.);
         priceSalad.put("Мужские слезы", 89.);
         priceSalad.put("Красное море", 76.);
-        priceSalad.put("Салат из грибов и курицы", 60.);
         priceSalad.put("«Обжорка» с курицей", 99.);
 
     }
